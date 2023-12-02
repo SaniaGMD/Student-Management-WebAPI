@@ -34,7 +34,11 @@ builder.Services.AddIdentityCore<AppUser>(opt => opt.SignIn.RequireConfirmedEmai
 
 
 
-
+builder.Services.AddControllers()
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+    });
 builder.Services.AddAuthentication();
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

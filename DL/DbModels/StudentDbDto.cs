@@ -13,11 +13,12 @@ namespace DL.DbModels
     {
         [Key]
         public int Id { get; set; }
-        string Name { get; set; }
-        string RollNumber { get; set; }
-        String PhoneNumber { get; set; }
+        public string Name { get; set; }
+        public string RollNumber { get; set; }
+        public String PhoneNumber { get; set; }
 
-        ICollection<StudentSubjectDbDto> studentSubjects { get; set; } = new List<StudentSubjectDbDto>();
+
+        public ICollection<StudentSubjectDbDto> studentSubjects { get; set; } = new List<StudentSubjectDbDto>();
 
     }
 }

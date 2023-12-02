@@ -1,25 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\BL\\BL.csproj": {}
+    "F:\\Semester 7\\EAD\\ead\\BL\\BL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\BL\\BL.csproj": {
+    "F:\\Semester 7\\EAD\\ead\\BL\\BL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\BL\\BL.csproj",
+        "projectUniqueName": "F:\\Semester 7\\EAD\\ead\\BL\\BL.csproj",
         "projectName": "BL",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\BL\\BL.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\BL\\obj\\",
+        "projectPath": "F:\\Semester 7\\EAD\\ead\\BL\\BL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "F:\\Semester 7\\EAD\\ead\\BL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,17 +22,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\custompackage": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vectwiz/_packaging/vectwiz/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\DL.csproj": {
-                "projectPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\DL.csproj"
+              "F:\\Semester 7\\EAD\\ead\\DL\\DL.csproj": {
+                "projectPath": "F:\\Semester 7\\EAD\\ead\\DL\\DL.csproj"
               }
             }
           }
@@ -67,31 +59,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\Core.csproj": {
+    "F:\\Semester 7\\EAD\\ead\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\Core.csproj",
+        "projectUniqueName": "F:\\Semester 7\\EAD\\ead\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\obj\\",
+        "projectPath": "F:\\Semester 7\\EAD\\ead\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "F:\\Semester 7\\EAD\\ead\\Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,10 +81,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\custompackage": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vectwiz/_packaging/vectwiz/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -149,31 +128,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\DL.csproj": {
+    "F:\\Semester 7\\EAD\\ead\\DL\\DL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\DL.csproj",
+        "projectUniqueName": "F:\\Semester 7\\EAD\\ead\\DL\\DL.csproj",
         "projectName": "DL",
-        "projectPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\DL.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\DL\\obj\\",
+        "projectPath": "F:\\Semester 7\\EAD\\ead\\DL\\DL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "F:\\Semester 7\\EAD\\ead\\DL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -181,17 +150,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\custompackage": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/vectwiz/_packaging/vectwiz/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\admin\\source\\repos\\MyWebApiStudentGPA\\Core\\Core.csproj"
+              "F:\\Semester 7\\EAD\\ead\\Core\\Core.csproj": {
+                "projectPath": "F:\\Semester 7\\EAD\\ead\\Core\\Core.csproj"
               }
             }
           }
@@ -227,12 +193,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "win-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

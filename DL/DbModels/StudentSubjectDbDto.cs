@@ -13,10 +13,11 @@ namespace DL.DbModels
         [Key]
         public int Id { get; set; }
         public int SID { get; set;}
-        public StudentDbDto studentDbDto { get; set; }
-        public SubjectDbDto SubjectDbDto { get; set; }
+        public StudentDbDto? studentDbDto { get; set; }
+        public SubjectDbDto? SubjectDbDto { get; set; }
         public int SubjectId { get; set; }
         public double GPA { get; set; }
+        public double Marks { get; set; }
 
     }
 }

@@ -16,7 +16,7 @@ namespace DL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.24")
+                .HasAnnotation("ProductVersion", "6.0.25")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -29,9 +29,21 @@ namespace DL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RollNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("studentDbDto");
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("DL.DbModels.StudentSubjectDbDto", b =>
@@ -45,25 +57,22 @@ namespace DL.Migrations
                     b.Property<double>("GPA")
                         .HasColumnType("float");
 
-                    b.Property<int>("SID")
-                        .HasColumnType("int");
+                    b.Property<double>("Marks")
+                        .HasColumnType("float");
 
-                    b.Property<int>("SubjectDbDtoid")
+                    b.Property<int>("SID")
                         .HasColumnType("int");
 
                     b.Property<int>("SubjectId")
                         .HasColumnType("int");
 
-                    b.Property<int>("studentDbDtoId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("SubjectDbDtoid");
+                    b.HasIndex("SID");
 
-                    b.HasIndex("studentDbDtoId");
+                    b.HasIndex("SubjectId");
 
-                    b.ToTable("studentSubjectDbDto");
+                    b.ToTable("StudentSubjects");
                 });
 
             modelBuilder.Entity("DL.DbModels.SubjectDbDto", b =>
@@ -74,28 +83,42 @@ namespace DL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("id");
 
-                    b.ToTable("subjectDbDto");
+                    b.ToTable("Subjects");
                 });
 
             modelBuilder.Entity("DL.DbModels.StudentSubjectDbDto", b =>
                 {
-                    b.HasOne("DL.DbModels.SubjectDbDto", "SubjectDbDto")
-                        .WithMany()
-                        .HasForeignKey("SubjectDbDtoid")
+                    b.HasOne("DL.DbModels.StudentDbDto", "studentDbDto")
+                        .WithMany("studentSubjects")
+                        .HasForeignKey("SID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DL.DbModels.StudentDbDto", "studentDbDto")
-                        .WithMany()
-                        .HasForeignKey("studentDbDtoId")
+                    b.HasOne("DL.DbModels.SubjectDbDto", "SubjectDbDto")
+                        .WithMany("StudentSubjects")
+                        .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("SubjectDbDto");
 
                     b.Navigation("studentDbDto");
+                });
+
+            modelBuilder.Entity("DL.DbModels.StudentDbDto", b =>
+                {
+                    b.Navigation("studentSubjects");
+                });
+
+            modelBuilder.Entity("DL.DbModels.SubjectDbDto", b =>
+                {
+                    b.Navigation("StudentSubjects");
                 });
 #pragma warning restore 612, 618
         }

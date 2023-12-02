@@ -26,7 +26,7 @@ namespace DL
 
         public  IEnumerable<StudentDbDto> GetStudents()
         {
-            return _stContext.studentDbDto.AsEnumerable();
+            return _stContext.Students.AsEnumerable();
         }
 
         public IEnumerable<StudentResponseDto> GetStudentsAsync()

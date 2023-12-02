@@ -11,8 +11,8 @@ namespace DL.DbModels
     {
         [Key]
         public int id { get; set; }
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        ICollection<StudentSubjectDbDto> StudentSubjects { get; set; } = new List<StudentSubjectDbDto>();
+        public ICollection<StudentSubjectDbDto> StudentSubjects { get; set; } = new List<StudentSubjectDbDto>();
     }
 }

@@ -4,84 +4,86 @@
 
 namespace DL.Migrations
 {
-    public partial class addtodatabase : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "studentDbDto",
+                name: "Students",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RollNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_studentDbDto", x => x.Id);
+                    table.PrimaryKey("PK_Students", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "subjectDbDto",
+                name: "Subjects",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1")
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_subjectDbDto", x => x.id);
+                    table.PrimaryKey("PK_Subjects", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "studentSubjectDbDto",
+                name: "StudentSubjects",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SID = table.Column<int>(type: "int", nullable: false),
-                    studentDbDtoId = table.Column<int>(type: "int", nullable: false),
-                    SubjectDbDtoid = table.Column<int>(type: "int", nullable: false),
                     SubjectId = table.Column<int>(type: "int", nullable: false),
                     GPA = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_studentSubjectDbDto", x => x.Id);
+                    table.PrimaryKey("PK_StudentSubjects", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_studentSubjectDbDto_studentDbDto_studentDbDtoId",
-                        column: x => x.studentDbDtoId,
-                        principalTable: "studentDbDto",
+                        name: "FK_StudentSubjects_Students_SID",
+                        column: x => x.SID,
+                        principalTable: "Students",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_studentSubjectDbDto_subjectDbDto_SubjectDbDtoid",
-                        column: x => x.SubjectDbDtoid,
-                        principalTable: "subjectDbDto",
+                        name: "FK_StudentSubjects_Subjects_SubjectId",
+                        column: x => x.SubjectId,
+                        principalTable: "Subjects",
                         principalColumn: "id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_studentSubjectDbDto_studentDbDtoId",
-                table: "studentSubjectDbDto",
-                column: "studentDbDtoId");
+                name: "IX_StudentSubjects_SID",
+                table: "StudentSubjects",
+                column: "SID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_studentSubjectDbDto_SubjectDbDtoid",
-                table: "studentSubjectDbDto",
-                column: "SubjectDbDtoid");
+                name: "IX_StudentSubjects_SubjectId",
+                table: "StudentSubjects",
+                column: "SubjectId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "studentSubjectDbDto");
+                name: "StudentSubjects");
 
             migrationBuilder.DropTable(
-                name: "studentDbDto");
+                name: "Students");
 
             migrationBuilder.DropTable(
-                name: "subjectDbDto");
+                name: "Subjects");
         }
     }
 }

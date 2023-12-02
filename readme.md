@@ -1,7 +1,8 @@
 This repository contains a web API project for managing student information, subjects, and their academic performance. The API includes endpoints for creating, updating, and deleting student records, subjects, and marks. It provides functionalities such as retrieving a student's subjects, viewing marks for a specific subject, and calculating the GPA of a student. The project is built using ASP.NET Core and Entity Framework, ensuring a robust and scalable solution for student GPA management.
 
 
-*Features:*
+_Features:_
+
 Student CRUD operations
 Subject CRUD operations
 Record and update student marks
@@ -9,7 +10,7 @@ Retrieve student subjects
 View marks for a specific subject
 Calculate student GPA
 
-_Technologies_
+_Technologies:_
 
 ASP.NET Core
 Entity Framework
